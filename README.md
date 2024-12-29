@@ -1,1 +1,1 @@
-# nvim
+# NeoVim
