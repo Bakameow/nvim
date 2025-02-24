@@ -13,7 +13,7 @@ return {
         servers = {
             lua_ls = {},
             rust_analyzer = {
-                settings = {
+                capabilities = {
                     ['rust-analyzer'] = {
                         diagnostics = {
                             enable = false;
@@ -22,7 +22,8 @@ return {
                     }
                 }
             },
-            clangd = {},
+            clangd = {}, 
+            yamlls = {},
         }
     },
     config = function(_, opts)

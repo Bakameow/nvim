@@ -20,7 +20,7 @@ map("n", "<C-k>", "<C-w>k", opts)
 map("n", "<C-l>", "<C-w>l", opts)
 map("n", "q", ":qa<CR>", opts)
 map("n", "qq", ":q!<CR>", opts)
-map("n", "ww", ":w<CR>", opts)
+map("n", "<C-s>", ":w<CR>", opts)
 map("n", "Q", ":qa!<CR>", opts)
 
 -- Resize with arrows
@@ -31,14 +31,19 @@ map("n", "<sh>", ":vertical resize -2<CR>", opts)
 map("n", "<sl>", ":vertical resize +2<CR>", opts)
 
 -- NvimTree
-map("n", "tt", ":NvimTreeToggle<CR>", opts)
+map("n", "<C-e>", ":NvimTreeToggle<CR>", opts)
 
 -- LSP
 map("n", "gd", ":lua vim.lsp.buf.definition()<CR>", opts)
-
+map("n", "K", ":lua vim.lsp.buf.hover()<CR>", opts)
+map("n", "<C-k>", ":lua vim.lsp.buf.signature_help()<CR>", opts)
+-- map("n", "rn", ":lua vim.lsp.buf.rename()<CR>", opts)
+map("n", "gr", ":lua vim.lsp.buf.references()<CR>", opts)
 -- bufferline
-map("n", "bh", ":BufferLineCyclePrev<CR>")
-map("n", "bl", ":BufferLineCycleNext<CR>")
+map("n", "<S-h>", ":BufferLineCyclePrev<CR>", opts)
+map("n", "<S-l>", ":BufferLineCycleNext<CR>", opts)
+map("n", "<C-w>", ":bdelete<CR>", opts)
+
 -----------------
 -- Visual mode --
 -----------------
